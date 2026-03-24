@@ -1,0 +1,19 @@
+// Instalação
+
+npm init -y
+npm install express
+
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Rota simples GET
+app.get('/', (req, res) => {
+  res.send('Olá! Esta é uma API REST simples.');
+});
+
+// Iniciar servidor
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});
